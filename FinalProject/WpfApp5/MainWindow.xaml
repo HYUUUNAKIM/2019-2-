@@ -1,0 +1,20 @@
+﻿<Window x:Class="WpfApp5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="805" Width="1200"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1169"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Frame Source="/View/Page1.xaml" Name="BuyerGrid" Margin="0,0,569,0" Width="600" NavigationUIVisibility="Hidden" Navigated="BuyerGrid_Navigated"/>
+        <Frame Source="/View/SellerIntro.xaml"  Name="SellerGrid" Width="600" NavigationUIVisibility="Hidden" Grid.ColumnSpan="2" Navigated="SellerGrid_Navigated" HorizontalAlignment="Right" />
+
+    </Grid>
+
+</Window>

@@ -1,0 +1,40 @@
+﻿<Page x:Class="WpfApp5.Page4"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp5"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page4" Width="600" Height="771">
+
+    <Grid Width="590" Height="761">
+        <Border BorderBrush="Black" BorderThickness="3" HorizontalAlignment="Left" Width="590" Height="761" VerticalAlignment="Top">
+        </Border>
+        <DataGrid ItemsSource="{Binding }" AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="30,66,0,485" Name="DataGrid" Width="211" CanUserResizeRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=id}" Header="회원 아이디" Width="100" IsReadOnly="True" />
+                <DataGridTextColumn Binding="{Binding Path=drink}" Header="음료" Width="100" IsReadOnly="True" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <RadioButton Content="Hot" Name="radioButton1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="111,376,0,0"/>
+        <RadioButton Content="Ice" Name="radioButton2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="181,376,0,0"/>
+        <Button Content="음료1 1000원" Name="button4"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="91" Margin="111,414,0,0" Background="White" Click="Button_Click_4"/>
+        <Button Content="음료2 2000원" Name="button5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="91" Margin="111,459,0,0" Background="White" Click="Button_Click_3"/>
+        <Button Content="음료3 3000원" Name="button6" HorizontalAlignment="Left" VerticalAlignment="Top" Width="91" Margin="111,504,0,0" Background="White" Click="button6_Click"/>
+        <Button Content="제조완료" Background="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Margin="309,583,0,0" Click="Button_Click_2"/>
+        <Button Content="정산" Background="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Margin="81,632,0,0" Click="Button_Click"/>
+        <Button Content="영업종료" Background="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Margin="81,666,0,0" Click="Button_Click_1"/>
+        <Label Content="" Name="label1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="326,358,0,0"/>
+        <Label Content="" Name="label2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="326,396,0,0"/>
+        <Label Content="" Name="label3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="326,433,0,0"/>
+        <Label Content="" Name="label4" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="326,475,0,0"/>
+        <Label Content="" Name="label5" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="326,519,0,0"/>
+
+        <Label Foreground="White" Content="" Name='labelid' HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,10,0,0"/>
+        <GroupBox Header="제조중인주문" HorizontalAlignment="Left" Height="260" VerticalAlignment="Top" Width="207" Margin="296,305,0,0"/>
+        <GroupBox Header="들어온 주문" HorizontalAlignment="Left" Height="264" VerticalAlignment="Top" Width="238" Margin="19,36,0,0" RenderTransformOrigin="0.5,0.5"/>
+        <Button Content="초기화" Background="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="401,583,0,0" Click="Button_Click_5"/>
+
+    </Grid>
+</Page>
